@@ -1,7 +1,3 @@
-output "backup_restore_testing_selections_id" {
-  description = "Map of id values across all backup_restore_testing_selections, keyed the same as var.backup_restore_testing_selections"
-  value       = { for k, v in aws_backup_restore_testing_selection.backup_restore_testing_selections : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "backup_restore_testing_selections_iam_role_arn" {
   description = "Map of iam_role_arn values across all backup_restore_testing_selections, keyed the same as var.backup_restore_testing_selections"
   value       = { for k, v in aws_backup_restore_testing_selection.backup_restore_testing_selections : k => v.iam_role_arn if v.iam_role_arn != null && length(v.iam_role_arn) > 0 }
